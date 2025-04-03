@@ -169,6 +169,33 @@ export const questions: Question[] = [
       { letter: "P", text: "Open-ended with room for change" },
     ],
   },
+  {
+    id: 17,
+    group: "JP",
+    text: "When working on a project, do you prefer:",
+    options: [
+      { letter: "J", text: "A clear plan and timeline" },
+      { letter: "P", text: "A more spontaneous approach" },
+    ],
+  },
+  {
+    id: 18,
+    group: "JP",
+    text: "Do you find it easier to:",
+    options: [
+      { letter: "J", text: "Stick to a schedule" },
+      { letter: "P", text: "Adapt as you go" },
+    ],
+  },
+  {
+    id: 19,
+    group: "JP",
+    text: "In your free time, do you prefer to:",
+    options: [
+      { letter: "J", text: "Plan activities ahead of time" },
+      { letter: "P", text: "Decide on the spur of the moment" },
+    ],
+  },
 ];
 
 export const personalityTypes: PersonalityType[] = [
