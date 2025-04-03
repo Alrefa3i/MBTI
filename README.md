@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# Myers-Briggs Type Indicator (MBTI) React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with TypeScript and Vite that implements a simplified version of the Myers-Briggs Type Indicator (MBTI) personality assessment.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application presents users with a series of questions designed to assess their preferences across four key dichotomies:
 
-## Expanding the ESLint configuration
+- **Extraversion (E) vs. Introversion (I):** How you gain energy.
+- **Sensing (S) vs. Intuition (N):** How you take in information.
+- **Thinking (T) vs. Feeling (F):** How you make decisions.
+- **Judging (J) vs. Perceiving (P):** How you approach the outside world.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Based on the user's answers, the application calculates their MBTI personality type and provides a brief description.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React:** A JavaScript library for building user interfaces.
+- **TypeScript:** A superset of JavaScript that adds static typing.
+- **Vite:** A build tool that provides a fast and efficient development experience.
+- **Radix UI:** A set of accessible and unstyled UI primitives.
+- **Tailwind CSS:** A utility-first CSS framework for styling the application.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `src/`: Contains the source code for the application.
+  - `components/`: React components used in the application.
+    - `Results.tsx`: Displays the MBTI results.
+  - `types.ts`: Defines the TypeScript interfaces for the project.
+  - `functions.ts`: Contains the core logic for calculating the MBTI personality type.
+  - `data.ts`: Contains the questions and personality type data.
+  - `App.tsx`: The main application component.
+
+## Running the Application
+
+1.  Clone the repository.
+2.  Install the dependencies: `npm install`
+3.  Start the development server: `npm run dev`
+4.  Open your browser and navigate to the address shown in the terminal (usually `http://localhost:5173/`).
